@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #4abacb;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: calc(50% - 50px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4abacb;
+            color: white;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #87c65b;
+            transform: translateY(-2px);
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .feature-card {
+            background: #e7e5ec;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: calc(30% - 20px);
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .logout-btn {
+            background-color: #bd3434;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logout-btn:hover {
+            background-color: rgb(54, 237, 26);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Library Management System Dashboard</h1>
+</header>
+
+<!-- Logout Button -->
+<button class="logout-btn" onclick="logout()">Logout</button>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for books...">
+        <button onclick="searchBooks()">Search</button>
+    </div>
+
+    <h2>Features</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Search Books</h3>
+            <p>Find books in the library catalog.</p>
+            <button onclick="searchBooks()">Go</button>
+        </div>
+        <div class="feature-card">
+            <h3>View Issued Books</h3>
+            <p>View the issued books in the catalog.</p>
+            <button onclick="viewissuedbooks()">Go</button>
+        </div>
+        <div class="feature-card">
+            <h3>Return Books</h3>
+            <p>Return the books in the library.</p>
+            <button onclick="returnbooks()">Go</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function logout() {
+        alert('You have been logged out!');
+        window.location.href = 'login update.html';
+    }
+
+    function searchBooks() {
+        alert('Searching for books...');
+    }
+
+    function viewissuedbooks() {
+        alert('The books which are issued:');
+        window.location.href = 'index.html';
+    }
+
+    function returnbooks() {
+        alert('Returning of books');
+        window.location.href = 'return_books.html';
+    }
+</script>
+
+</body>
+</html>
